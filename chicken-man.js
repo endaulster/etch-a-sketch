@@ -65,13 +65,18 @@ document.body.onmouseup = () => {
 
 //  Now the function to change color
 
+//      We get the cells
 const AllCells = Array.from(document.querySelectorAll(".aCell"));
-AllCells.forEach( aCell => aCell.addEventListener('mouseover', function(){cellColorChanger(aCell);}));
-AllCells.forEach( aCell => aCell.addEventListener('click', function(){cellColorChangerOnClick(aCell);}));
 
-function cellColorChangerOnClick(z){
-        z.style.cssText="background-color: black";
-}
+//       Change color when mouse is over
+AllCells.forEach( aCell => aCell.addEventListener('mouseover', function(){cellColorChanger(aCell);}));
+
+//      Change color on first click
+
+AllCells.forEach( aCell => aCell.addEventListener('mousedown', function(){clickColorChanger(aCell);}));
+
+//      Changer function
+
 
 function cellColorChanger(z){
     if(mouseDown == true)
@@ -80,5 +85,11 @@ function cellColorChanger(z){
     }
 
 }
+
+function clickColorChanger(z)
+{
+    z.style.cssText="background-color: black";
+}
+
 
 ////////////////////////////////

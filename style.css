@@ -41,10 +41,13 @@
 
 .box {
     display: flex;
+    position: relative;
     background-color: white;
     width: 600px;
     height: 450px;
 }
+
+
 
 .aRow {
     background-color: white;
@@ -59,7 +62,6 @@
     display: flex;
     flex: 1;
     /*margin: 1px;*/
-    
 }
 
 .aCell:hover {
