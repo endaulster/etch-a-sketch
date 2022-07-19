@@ -27,6 +27,8 @@
     -moz-box-shadow: 1px 3px 20px 2px rgba(0,0,0,0.51);
 }
 
+/* TITLE OF THE GAME */
+
 .title {
     font-family: "Brush Script MT";
     font-size: 40px;
@@ -35,9 +37,7 @@
     font-weight: bold;
 }
 
-.controls {
-    padding: 33px;
-}
+/* MIDDLE BOX */
 
 .box {
     display: flex;
@@ -46,8 +46,6 @@
     width: 600px;
     height: 450px;
 }
-
-
 
 .aRow {
     background-color: white;
@@ -67,3 +65,61 @@
 .aCell:hover {
     background:black;
     }
+
+/* CONTROLS */
+
+.controls {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 790px;
+}
+
+.gridsize {
+    border-radius: 50%;
+    background: linear-gradient(225deg, #ffffff, #e6dddd);
+    box-shadow:  -41px 41px 82px #666262;
+    width: 100px;
+    height: 100px;
+    margin-bottom: 5px;
+}
+
+.gridsize:hover {
+    background: linear-gradient(225deg, #e6dddd, #ffffff);
+    box-shadow:  -41px 41px 82px #666262;
+
+}
+
+.resetbutton {
+    border-radius: 12px;
+    background: linear-gradient(225deg, #ffffff, #e6dddd);
+    box-shadow:  -9px 9px 18px #666262;
+    width: 100px;
+    height: 50px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-weight: bold;
+    font-family: "Arial";
+    color: rgb(151, 151, 151);
+}
+
+.resetbutton:hover {
+    background: linear-gradient(225deg, #e6dddd, #ffffff);
+    color: rgb(93, 93, 93);
+}
+
+.pen-color {
+    border-radius: 50%;
+    background: linear-gradient(225deg, #ffffff, #e6dddd);
+    box-shadow:  -41px 41px 82px #666262;
+    width: 100px;
+    height: 100px;
+    margin-bottom: 5px;
+}
+
+.pen-color:hover {
+    background: linear-gradient(225deg, #e6dddd, #ffffff);
+    box-shadow:  -41px 41px 82px #666262;
+
+}

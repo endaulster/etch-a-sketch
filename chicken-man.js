@@ -77,7 +77,6 @@ AllCells.forEach( aCell => aCell.addEventListener('mousedown', function(){clickC
 
 //      Changer function
 
-
 function cellColorChanger(z){
     if(mouseDown == true)
     {
@@ -90,6 +89,5 @@ function clickColorChanger(z)
 {
     z.style.cssText="background-color: black";
 }
-
 
 ////////////////////////////////
