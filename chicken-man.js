@@ -77,17 +77,21 @@ AllCells.forEach( aCell => aCell.addEventListener('mousedown', function(){clickC
 
 //      Changer function
 
+//      We get the color of choice
+const CHOSEN_COLOR = document.getElementById("cchanger");
+
 function cellColorChanger(z){
     if(mouseDown == true)
     {
-        z.style.cssText="background-color: black";
+        z.style.backgroundColor= CHOSEN_COLOR.value;
     }
 
 }
 
 function clickColorChanger(z)
 {
-    z.style.cssText="background-color: black";
+    z.style.backgroundColor= CHOSEN_COLOR.value;
 }
+
 
 ////////////////////////////////

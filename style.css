@@ -116,6 +116,9 @@
     width: 100px;
     height: 100px;
     margin-bottom: 5px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
 
 .pen-color:hover {
@@ -123,3 +126,9 @@
     box-shadow:  -41px 41px 82px #666262;
 
 }
+
+#cchanger {
+    width: 30px;
+    height: 30px;
+}
+
