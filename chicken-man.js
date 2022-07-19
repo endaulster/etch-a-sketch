@@ -4,7 +4,7 @@ const box = document.querySelector(" .box");
 let rows = document.getElementsByClassName("aRow");
 let cells = document.getElementsByClassName("aCell");
 
-//functions
+//grid functions
 
 function makeRow (rowNumber){
     for(let i = 0; i < rowNumber; i++ )
@@ -45,17 +45,40 @@ function dewIt(size){
     }
 }
 
+////////////////////////
+
 //We make the standard grid
 
-dewIt(4);
+dewIt(16);
 
 //Change the color when user clicks
 
-let boxSelection = document.querySelector(" .aCell");
+//  We check if mouse is down when we have the conditions
 
-boxSelection.addEventListener("mouseover", function(){
-    console.log("lol");
+let mouseDown = false;
+document.body.onmousedown = () => {
+  mouseDown = true;
+};
+document.body.onmouseup = () => {
+  mouseDown = false;
+};
+
+//  Now the function to change color
+
+const AllCells = Array.from(document.querySelectorAll(".aCell"));
+AllCells.forEach( aCell => aCell.addEventListener('mouseover', function(){cellColorChanger(aCell);}));
+AllCells.forEach( aCell => aCell.addEventListener('click', function(){cellColorChangerOnClick(aCell);}));
+
+function cellColorChangerOnClick(z){
+        z.style.cssText="background-color: black";
 }
 
+function cellColorChanger(z){
+    if(mouseDown == true)
+    {
+        z.style.cssText="background-color: black";
+    }
 
-);
+}
+
+////////////////////////////////
