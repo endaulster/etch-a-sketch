@@ -105,11 +105,8 @@ function clickColorChanger(z)
 
 function reset()
 {
-    let AllCells = Array.from(document.querySelectorAll(".aCell"));
-    for(let i = 0 ; i < AllCells.length ; i++)
-    {
-        AllCells[i].style.backgroundColor="white";
-    }
+    dewIt(LAST_GRID_SIZE);
+    tempGrid();
 }
 
 // Grid size changer
@@ -147,7 +144,6 @@ function tempGrid()
             removetrans(AllCells[i]);
         }
             , 180)
-        
     }
 }
 ////////////////////////////////
