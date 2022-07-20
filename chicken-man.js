@@ -40,6 +40,12 @@ function dewIt(size){
         }
         makeRow(size);
         makeColum(size);
+        //We reset the listeners because they died
+        let AllCells = Array.from(document.querySelectorAll(".aCell"));
+        //       Change color when mouse is over
+        AllCells.forEach( aCell => aCell.addEventListener('mouseover', function(){cellColorChanger(aCell);}));
+        //      Change color on first click
+        AllCells.forEach( aCell => aCell.addEventListener('mousedown', function(){clickColorChanger(aCell);}));
     } else {
     makeRow(size);
     makeColum(size);
@@ -99,6 +105,7 @@ function clickColorChanger(z)
 
 function reset()
 {
+    let AllCells = Array.from(document.querySelectorAll(".aCell"));
     for(let i = 0 ; i < AllCells.length ; i++)
     {
         AllCells[i].style.backgroundColor="white";
