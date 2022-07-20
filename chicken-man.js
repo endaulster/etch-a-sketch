@@ -4,6 +4,8 @@ const box = document.querySelector(" .box");
 let rows = document.getElementsByClassName("aRow");
 let cells = document.getElementsByClassName("aCell");
 
+let LAST_GRID_SIZE = 16;
+
 //grid functions
 
 function makeRow (rowNumber){
@@ -38,11 +40,11 @@ function dewIt(size){
         }
         makeRow(size);
         makeColum(size);
-
     } else {
     makeRow(size);
     makeColum(size);
     }
+    LAST_GRID_SIZE = size;
 }
 
 ////////////////////////
@@ -66,7 +68,7 @@ document.body.onmouseup = () => {
 //  Now the function to change color
 
 //      We get the cells
-const AllCells = Array.from(document.querySelectorAll(".aCell"));
+let AllCells = Array.from(document.querySelectorAll(".aCell"));
 
 //       Change color when mouse is over
 AllCells.forEach( aCell => aCell.addEventListener('mouseover', function(){cellColorChanger(aCell);}));
@@ -93,5 +95,16 @@ function clickColorChanger(z)
     z.style.backgroundColor= CHOSEN_COLOR.value;
 }
 
+//  Reset button
+
+function reset()
+{
+    for(let i = 0 ; i < AllCells.length ; i++)
+    {
+        AllCells[i].style.backgroundColor="white";
+    }
+}
 
 ////////////////////////////////
+
+
