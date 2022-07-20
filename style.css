@@ -53,6 +53,7 @@
     flex-direction: column;
     flex: 1;
     /*margin: 1px;*/
+    transition: all 0.10s;
 }
 
 .aCell {
@@ -60,12 +61,18 @@
     display: flex;
     flex: 1;
     /*margin: 1px;*/
+    
 }
 
 .aCell:hover {
     background:black;
     }
 
+
+.temp-margin {
+    margin: 1px;
+    background-color: lightpink;
+}
 /* CONTROLS */
 
 .controls {

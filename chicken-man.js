@@ -119,15 +119,37 @@ function gridChanger()
     if (LAST_GRID_SIZE == 16)
     {
         dewIt(32);
+        tempGrid();
     } else if (LAST_GRID_SIZE == 32)
     {
         dewIt(64);
+        tempGrid();
     } else if (LAST_GRID_SIZE == 64)
     {
         dewIt(16);
+        tempGrid();
     } 
 }
 
+function tempGrid()
+{
+    let AllCells = Array.from(document.querySelectorAll(".aCell"));
+    for(let i = 0 ; i < AllCells.length ; i++)
+    {
+        AllCells[i].classList.add("temp-margin");
+    }
+    function removetrans(x){
+        x.classList.remove("temp-margin");
+    }
+    for(let i = 0 ; i < AllCells.length ; i++)
+    {
+        setTimeout(function() {
+            removetrans(AllCells[i]);
+        }
+            , 180)
+        
+    }
+}
 ////////////////////////////////
 
 
