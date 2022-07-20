@@ -112,6 +112,22 @@ function reset()
     }
 }
 
+// Grid size changer
+
+function gridChanger()
+{
+    if (LAST_GRID_SIZE == 16)
+    {
+        dewIt(32);
+    } else if (LAST_GRID_SIZE == 32)
+    {
+        dewIt(64);
+    } else if (LAST_GRID_SIZE == 64)
+    {
+        dewIt(16);
+    } 
+}
+
 ////////////////////////////////
 
 

@@ -82,12 +82,22 @@
     width: 100px;
     height: 100px;
     margin-bottom: 5px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
 
 .gridsize:hover {
     background: linear-gradient(225deg, #e6dddd, #ffffff);
     box-shadow:  -41px 41px 82px #666262;
 
+}
+
+.sizebutton {
+    width: 25px;
+    height: 21px;
+    background-color: black;
+    border-color: white;
 }
 
 .resetbutton {
