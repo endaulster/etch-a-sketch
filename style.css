@@ -133,3 +133,26 @@
     height: 30px;
 }
 
+/* FOOTER */
+
+.footerbox {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 13px;
+    padding: 10px;
+    font-family: Helvetica;
+    font-weight: bold;
+    transition: all 0.5s;
+    max-height: 45px;
+}
+
+.gitlogo{
+    transition: all 0.35s;
+}
+
+.gitlogo:hover{
+    transform: rotate(360deg) scale(1.1);
+    
+}
+
